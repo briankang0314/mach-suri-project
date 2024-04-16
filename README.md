@@ -55,3 +55,32 @@ Using a relational SQL database, the initial schema will include tables for User
 | `location`         | Location of the job.                          |
 | `compensationRange` | Compensation range offered for the job.      |
 | `postingDate`      | Date and time the job was posted.             |
+
+## Deployment Process
+
+### Initial Deployment:
+- Set up a Heroku account and create a new application.
+- Connect the Heroku app to the GitHub repository.
+- Set up automatic deployment from the main branch on Heroku.
+- Configure environment variables in Heroku, such as `SECRET_KEY` and database credentials.
+- Deploy the application and perform initial testing to ensure functionality.
+
+### Ongoing Updates:
+- Develop new features in separate branches in Git.
+- Use pull requests to merge features into the main branch after code review.
+- Continuous integration via GitHub Actions will run tests; successful results are required before merging.
+- Updates are automatically deployed to Heroku when changes are merged to the main branch.
+
+## Gathering Results
+
+### User Feedback:
+- Regularly collect user feedback through surveys and direct user communication.
+
+### Performance Metrics:
+- Monitor application performance, focusing on response times and system availability.
+
+### Usage Statistics:
+- Track active users, job postings, and search usage to assess engagement and utility.
+
+### Maintenance and Bugs:
+- Implement a system for tracking and promptly addressing bugs and maintenance issues.
