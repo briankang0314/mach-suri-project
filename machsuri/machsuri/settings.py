@@ -34,9 +34,7 @@ DEBUG = env.bool('DEBUG', default=False)
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
 
-print("Secret Key:", SECRET_KEY)
-print("Debug:", DEBUG)
-print("Allowed Hosts:", ALLOWED_HOSTS)
+AUTH_USER_MODEL = 'users.User'
 
 # Application definition
 
@@ -47,6 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'machsuri.users',
+    'machsuri.jobs',
 ]
 
 MIDDLEWARE = [
