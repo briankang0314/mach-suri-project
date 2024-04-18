@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My site{% endblock %}</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'users:logout' %}">Log-Out</a></li>
+                    <li><a href="{% url 'users:profile' %}">Profile</a></li>
+                {% else %}
+                    <li><a href="{% url 'users:login' %}">Log-In</a></li>
+                    <li><a href="{% url 'users:register' %}">Register</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2024 My Website. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+

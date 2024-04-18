@@ -45,9 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'machsuri.apps.users',
-    'machsuri.apps.jobs',
-    'machsuri.apps.core',
+    'apps.core.apps.CoreConfig',
+    'apps.users.apps.UsersConfig',
+    'apps.jobs.apps.JobsConfig',
 ]
 
 MIDDLEWARE = [
@@ -65,7 +65,7 @@ ROOT_URLCONF = 'machsuri.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
