@@ -45,9 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'machsuri.users',
-    'machsuri.jobs',
-    'core',
+    'machsuri.apps.users',
+    'machsuri.apps.jobs',
+    'machsuri.apps.core',
 ]
 
 MIDDLEWARE = [

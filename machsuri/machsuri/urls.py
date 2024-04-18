@@ -22,6 +22,6 @@ from apps.core.views import HomePageView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users/', include('machsuri.users.urls')),
+    path('users/', include('machsuri.apps.users.urls')),
     path('', HomePageView.as_view(), name='home'),
 ]
