@@ -17,12 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import path, include
-from django.views.generic import TemplateView
+from core.views import HomePageView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('machsuri.users.urls')),
-    # Direct the root URL to a simple home page view for now
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('', HomePageView.as_view(), name='home'),
 ]

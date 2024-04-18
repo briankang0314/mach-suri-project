@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'machsuri.users',
     'machsuri.jobs',
+    'core',
 ]
 
 MIDDLEWARE = [
